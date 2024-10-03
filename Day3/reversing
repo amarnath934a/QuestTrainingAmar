@@ -1,0 +1,43 @@
+//question:
+// 1,2,3,4  reverse to //2 1 4 3
+
+
+
+
+//solution:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace QuestDay2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] number = { 1, 2, 3, 4, };
+            int[] newNumber = new int[number.Length];
+            for (int i = 0; i < number.Length; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    newNumber[i] = number[i + 1];
+                }
+                else
+                {
+                    newNumber[i] = number[i - 1];
+                }
+            }
+            Console.WriteLine("rearranged array: ");
+            for (int i = 0; i < newNumber.Length; i++)
+            {
+                Console.WriteLine(newNumber[i]);
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
