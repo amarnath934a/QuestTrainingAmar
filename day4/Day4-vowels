@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace QuestDay2
+{
+    internal class Program
+    {
+                static void Main()
+        {
+            Console.WriteLine("enter value");
+            string input = Console.ReadLine();
+            string vowels = "aeiouAEIOU";
+            foreach (char ch in input)
+            {
+                if (vowels.Contains(ch))
+                {
+                    Console.WriteLine("vowels are : " + ch);
+                }
+            }
+            Console.ReadLine();
+        }
+    }
+}

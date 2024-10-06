@@ -1,0 +1,68 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace QuestDay2
+{
+    internal class Program
+    {
+
+        //static void Main(string[] args)
+        //{
+        //    Console.Write("Enter number of lines : ");
+        //    int rows = int.Parse(Console.ReadLine());
+        //    for (int i = 1; i <= rows; i++)
+        //    {
+        //        for (int j = 1; j <= i; j++)
+        //        {
+        //            Console.Write("*");
+        //        }
+        //        Console.WriteLine();
+        //    }
+        //    Console.ReadLine();
+        //}
+
+
+        //static void Main(string[] args)
+        //{
+        //    Console.Write("Enter number of lines : ");
+        //    int rows = int.Parse(Console.ReadLine());
+        //    int num = 1;
+        //    for (int i = 1; i <= rows; i++)
+        //    {
+        //        for (int j = 1; j <= i; j++)
+        //        {
+        //            Console.Write(num + " ");
+        //            num++;
+        //        }
+        //        Console.WriteLine();
+
+        //    }
+        //    Console.ReadLine();
+        //}
+
+
+        static void Main(string[] args)
+        {
+           Console.Write("Enter number of lines : ");
+           int rows = int.Parse(Console.ReadLine());
+           int num = 1;
+
+           for (int i = 1; i <= rows; i++)
+           {
+               for (int j = 1; j <= i; j++)
+               {
+                   Console.Write(j + " ");
+                   num++;
+               }
+               Console.WriteLine();
+
+           }
+           Console.ReadLine();
+        }
+
+        }
+    }
+}
