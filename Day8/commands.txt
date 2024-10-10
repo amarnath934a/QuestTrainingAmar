@@ -1,0 +1,166 @@
+
+SQL Command Categories
+
+
+1.	Data Manipulation Language (DML)
+
+DML commands are used to manipulate and manage data within existing database structures.
+
+INSERT: Adds new rows to a table.
+
+Example: INSERT INTO employees (name, age) VALUES ('John Doe', 30); UPDATE: Modifies existing data in a table.
+Example: UPDATE employees SET age = 31 WHERE name = 'John Doe'; DELETE: Removes rows from a table.
+Example: DELETE FROM employees WHERE name = 'John Doe';
+
+
+2.	Data Definition Language (DDL)
+
+DDL commands are used to define and manage all database objects, including tables, schemas, and indexes.
+CREATE: Creates a new table or database object.
+
+Example: CREATE TABLE employees (id INT PRIMARY KEY, name VARCHAR(100), age INT); ALTER: Modifies an existing database object.
+Example: ALTER TABLE employees ADD COLUMN salary DECIMAL(10, 2); DROP: Deletes a table or database object.
+Example: DROP TABLE employees;
+
+
+3.	Data Control Language (DCL)
+
+DCL commands are used to control access to data in the database.
+
+GRANT: Provides specific privileges to users or roles. Example: GRANT SELECT ON employees TO user1;
+REVOKE: Removes specific privileges from users or roles.
+
+Example: REVOKE SELECT ON employees FROM user1;
+ 
+4.	Transaction Control Language (TCL)
+
+TCL commands are used to manage transactions in a database.
+
+COMMIT: Saves all changes made in the current transaction.
+
+Example: COMMIT;
+
+ROLLBACK: Undoes changes made in the current transaction.
+
+Example: ROLLBACK;
+
+SAVEPOINT: Sets a point within a transaction to which you can later roll back.
+
+Example: SAVEPOINT savepoint_name;
+
+
+5.	Data Query Language (DQL)
+
+DQL commands are used to query the database and retrieve data.
+
+SELECT: Retrieves data from one or more tables.
+
+Example: SELECT * FROM employees WHERE age > 25;
+
+
+Comprehensive SQL Commands
+
+
+1.	SELECT
+Used to retrieve data from one or more tables.
+Example: SELECT * FROM employees WHERE age > 25;
+
+2.	WHERE
+Filters records that meet specified conditions.
+Example: SELECT * FROM employees WHERE name = 'John Doe';
+
+3.	ORDER BY
+Sorts the result set in ascending or descending order.
+
+Example: SELECT * FROM employees ORDER BY age DESC;
+
+4.	INSERT INTO
+Adds new rows to a table.
+
+Example: INSERT INTO employees (name, age) VALUES ('Jane Doe', 28);
+
+5.	DELETE
+Removes rows from a table.
+
+Example: DELETE FROM employees WHERE name = 'John Doe';
+
+6.	TRUNCATE
+Removes all rows from a table without logging individual row deletions.
+
+Example: TRUNCATE TABLE employees;
+
+7.	Different Kinds of Joins
+Joins are used to combine rows from two or more tables based on related columns.
+
+-	INNER JOIN: Returns records with matching values in both tables.
+
+Example:  SELECT  employees.name,  departments.name  FROM  employees  INNER  JOIN
+ 
+departments ON employees.department_id = departments.id;
+
+-	LEFT JOIN: Returns all records from the left table and matched records from the right table.
+
+Example:	SELECT	employees.name,	departments.name	FROM	employees	LEFT	JOIN departments ON employees.department_id = departments.id;
+-	RIGHT JOIN: Returns all records from the right table and matched records from the left table.
+
+Example: SELECT employees.name, departments.name FROM employees RIGHT JOIN departments ON employees.department_id = departments.id;
+-	FULL OUTER JOIN: Returns records when there is a match in either left or right table.
+
+Example: SELECT employees.name, departments.name FROM employees FULL OUTER JOIN departments ON employees.department_id = departments.id;
+
+
+8.	CREATE
+Creates a new table or database object.
+
+Example: CREATE TABLE employees (id INT PRIMARY KEY, name VARCHAR(100), age INT);
+
+9.	DROP
+Deletes a table or database object.
+
+Example: DROP TABLE employees;
+
+10.	GROUP BY
+Groups rows that have the same values in specified columns into summary rows.
+
+Example: SELECT department_id, COUNT(*) FROM employees GROUP BY department_id;
+
+11.	HAVING
+Filters records after a GROUP BY operation.
+
+Example: SELECT department_id, COUNT(*) FROM employees GROUP BY department_id HAVING COUNT(*) > 5;
+ 
+12.	Aggregate Functions
+Perform calculations on a set of values and return a single value.
+
+COUNT: Returns the number of rows.
+
+Example: SELECT COUNT(*) FROM employees; SUM: Returns the total sum of a numeric column.
+Example: SELECT SUM(salary) FROM employees; AVG: Returns the average value of a numeric column.
+Example: SELECT AVG(age) FROM employees; MAX: Returns the maximum value of a column.
+Example: SELECT MAX(salary) FROM employees; MIN: Returns the minimum value of a column.
+Example: SELECT MIN(age) FROM employees;
+
+13.	CREATE INDEX
+Creates an index on a table to improve the speed of data retrieval.
+
+Example: CREATE INDEX idx_name ON employees (name);
+
+14.	Transactions
+A sequence of operations performed as a single logical unit of work.
+
+Example:
+
+BEGIN;
+
+INSERT INTO employees (name, age) VALUES ('Alice', 30); UPDATE employees SET age = 31 WHERE name = 'Alice'; COMMIT;
+15.	Functions
+Stored procedures that perform calculations and return a value.
+
+Example: SELECT UPPER(name) FROM employees;
+ 
+16.	UPDATE
+Modifies existing data in a table.
+
+Example: UPDATE employees SET age = 32 WHERE name = 'Alice';
+
+
