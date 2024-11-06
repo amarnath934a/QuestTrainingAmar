@@ -1,0 +1,6 @@
+06-11-2024 10:11:27: Notes table created successfully.
+06-11-2024 12:34:22: Table creation successfull.
+06-11-2024 12:34:56: Note created successfully.
+06-11-2024 12:36:04: Note updated successfully.
+06-11-2024 12:36:14: Note deleted successfully.
+
